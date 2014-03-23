@@ -6,7 +6,10 @@
 	"require": {
 		"laravel/framework": "4.1.*",
 		"awjudd/assetprocessor": "dev-master",
-		"awjudd/layoutview": "1.0.*"
+		"awjudd/layoutview": "1.0.*",
+		"zizaco/entrust": "1.*",
+		"zizaco/confide": "1.*",
+		"tag-planet/universal-analytics": "1.*"
 	},
 	"autoload": {
 		"classmap": [

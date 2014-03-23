@@ -11,4 +11,10 @@
 |
 */
 
-Route::controller('/', QuickGame::controller('HomeController'));
+// Confide RESTful route
+/*Route::get('user/confirm/{code}', QuickGame::action('UserController@getConfirm'));
+Route::get('user/reset/{token}', 'UserController@getReset');*/
+Route::controller( 'user', QuickGame::controller('UserController'));
+
+
+Route::controller('/', QuickGame::controller('HomeController'));// Confide routes

@@ -29,17 +29,18 @@
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
-        <div class="container">
-            <div class="row">
-                @include('layout.links')
-                <div class="col-sm-9 col-md-9">
-                    
-                </div>
+        <div class="container col-xs-12">
+            @include('layout.links')
+            <div class="col-sm-9 col-md-9">
+                @yield('content')
             </div>
         </div>
 
+        <footer class="center">
+            &copy; Copyright {{ HTML::link('http://www.andrewjudd.ca', 'Andrew Judd', ['target' => '_blank']) }} 2014.<br />
+        </footer>
 
         {{ AssetProcessor::scripts() }}
-        {{-- UniversalAnalytics::render() --}}
+        {{ UniversalAnalytics::render() }}
     </body>
 </html>

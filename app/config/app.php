@@ -112,6 +112,10 @@ return array(
 		'Awjudd\AssetProcessor\AssetProcessorServiceProvider',
         'Awjudd\Layoutview\LayoutviewServiceProvider',
 
+        'Zizaco\Confide\ConfideServiceProvider',
+        'Zizaco\Entrust\EntrustServiceProvider',
+
+        'TagPlanet\UniversalAnalytics\UniversalAnalyticsServiceProvider',
 	),
 
 	/*
@@ -177,10 +181,15 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 
-		'QuickGame'  => 'Awjudd\QuickGame\Facades\QuickGameFacade',
+		'QuickGame'	      => 'Awjudd\QuickGame\Facades\QuickGameFacade',
 		
 		'View'            => 'Awjudd\Layoutview\Facades\LayoutViewFacade',
         'AssetProcessor'  => 'Awjudd\AssetProcessor\Facades\AssetProcessorFacade',
+
+        'Confide'    => 'Zizaco\Confide\ConfideFacade',
+        'Entrust'    => 'Zizaco\Entrust\EntrustFacade',
+
+        'UniversalAnalytics' => 'TagPlanet\UniversalAnalytics\UniversalAnalyticsFacade',
 
 	),
 

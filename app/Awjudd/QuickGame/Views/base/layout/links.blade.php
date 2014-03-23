@@ -15,7 +15,7 @@
                         <li><span class="glyphicon glyphicon-file text-info"></span><a href="http://www.jquery2dotnet.com">Newsletters</a></li>
                         <li>
                             <span class="glyphicon glyphicon-comment text-success"></span><a href="http://www.jquery2dotnet.com">Comments</a>
-                                <span class="badge">42</span>
+                            <span class="badge">42</span>
                         </li>
                     </ul>
                 </div>

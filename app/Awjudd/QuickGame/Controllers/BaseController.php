@@ -3,13 +3,13 @@
 * @Author: Andrew Judd
 * @Date:   2014-03-22 21:50:04
 * @Last Modified by:   Andrew Judd
-* @Last Modified time: 2014-03-22 22:19:49
+* @Last Modified time: 2014-03-22 23:10:41
 */
 
 use Controller;
 use View;
 
-class BaseController extends Controller
+abstract class BaseController extends Controller
 {
 
     protected $layout = 'layout.layout';

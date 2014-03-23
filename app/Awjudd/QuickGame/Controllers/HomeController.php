@@ -3,7 +3,7 @@
 * @Author: Andrew Judd
 * @Date:   2014-03-22 21:54:05
 * @Last Modified by:   Andrew Judd
-* @Last Modified time: 2014-03-22 22:11:45
+* @Last Modified time: 2014-03-22 23:10:56
 */
 
 class HomeController extends BaseController
@@ -24,6 +24,6 @@ class HomeController extends BaseController
 
     public function getIndex()
     {
-
+        $this->render('content', 'home.welcome.index');
     }
 }
