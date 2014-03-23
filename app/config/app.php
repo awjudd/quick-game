@@ -111,6 +111,8 @@ return array(
 
 		'Awjudd\AssetProcessor\AssetProcessorServiceProvider',
         'Awjudd\Layoutview\LayoutviewServiceProvider',
+        
+        'McCool\LaravelAutoPresenter\LaravelAutoPresenterServiceProvider',
 
         'Zizaco\Confide\ConfideServiceProvider',
         'Zizaco\Entrust\EntrustServiceProvider',

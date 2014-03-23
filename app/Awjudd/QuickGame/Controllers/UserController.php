@@ -9,6 +9,8 @@
 |
 */
 
+use Auth;
+use AssetProcessor;
 use Confide;
 Use Input;
 use Lang;
@@ -19,6 +21,13 @@ use Awjudd\QuickGame\Models\User\User;
 
 class UserController extends BaseController
 {
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->beforeFilter('guest', ['only' => ['getLogin', 'postLogin', 'getCreate', 'postCreate', 'getForgot', 'postForgot', 'getReset', 'postReset']]);
+        $this->beforeFilter('auth', ['only' => ['getLogout', 'getProfile']]);
+    }
 
     /**
      * Displays the form for account creation
@@ -235,11 +244,26 @@ class UserController extends BaseController
      * Log the user out of the application.
      *
      */
-    public function getLogout()
+    public function getLogout($token = null)
     {
+        if(Auth::user()->token != $token)
+        {
+            return Redirect::to('/')
+                    ->with('error', 'Invalid Logout Token Provided');
+        }
+
+        Session::flush();
         Confide::logout();
         
         return Redirect::to('/');
+    }
+
+    public function getProfile()
+    {
+        $user = Auth::user();
+        AssetProcessor::add('profile-css', asset_path('styles/base/user/profile.css'));
+
+        $this->render('content', 'user.profile.index', compact('user'));
     }
 
 }

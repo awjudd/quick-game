@@ -1,0 +1,21 @@
+@section('links')
+    <div class="col-sm-3 col-md-3 left-panel">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-user">
+                        </span>User</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <ul>
+                            <li><span class="glyphicon glyphicon-log-out"></span>{{ HTML::link($user->logout, 'Log Out') }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@stop

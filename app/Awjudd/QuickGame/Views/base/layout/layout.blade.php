@@ -30,8 +30,9 @@
             </div><!--/.nav-collapse -->
         </div>
         <div class="container col-xs-12">
-            @include('layout.links')
+            @yield('links')
             <div class="col-sm-9 col-md-9">
+                @include('layout.notifications')
                 @yield('content')
             </div>
         </div>
