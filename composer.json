@@ -9,7 +9,8 @@
 		"awjudd/layoutview": "1.0.*",
 		"zizaco/entrust": "1.*",
 		"zizaco/confide": "1.*",
-		"tag-planet/universal-analytics": "1.*"
+		"tag-planet/universal-analytics": "1.*",
+		"mccool/laravel-auto-presenter": "*"
 	},
 	"autoload": {
 		"classmap": [
