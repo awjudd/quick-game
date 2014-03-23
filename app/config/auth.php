@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'model' => 'User',
+	'model' => '\Awjudd\QuickGame\Models\User\User',
 
 	/*
 	|--------------------------------------------------------------------------

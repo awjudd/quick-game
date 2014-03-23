@@ -13,6 +13,9 @@ use Confide;
 Use Input;
 use Lang;
 use Redirect;
+use Session;
+
+use Awjudd\QuickGame\Models\User\User;
 
 class UserController extends BaseController
 {
@@ -128,9 +131,9 @@ class UserController extends BaseController
                 $err_msg = Lang::get('confide::confide.alerts.wrong_credentials');
             }
 
-                        return Redirect::to('user/login')
+            return Redirect::to('user/login')
                             ->withInput(Input::except('password'))
-                ->with( 'error', $err_msg );
+                            ->with( 'error', $err_msg );
         }
     }
 
@@ -144,13 +147,13 @@ class UserController extends BaseController
         if ( Confide::confirm( $code ) )
         {
             $notice_msg = Lang::get('confide::confide.alerts.confirmation');
-                        return Redirect::to('user/login')
+            return Redirect::to('user/login')
                             ->with( 'notice', $notice_msg );
         }
         else
         {
             $error_msg = Lang::get('confide::confide.alerts.wrong_confirmation');
-                        return Redirect::to('user/login')
+            return Redirect::to('user/login')
                             ->with( 'error', $error_msg );
         }
     }
