@@ -16,5 +16,13 @@
 Route::get('user/reset/{token}', 'UserController@getReset');*/
 Route::controller( 'user', QuickGame::controller('UserController'));
 
+Route::group(['before' => 'auth'], function(){
+    // Get the "Twenty-One" game
+    Route::controller('/game/black-jack', QuickGame::controller('Game\BlackJackController'));
+
+    // Default to the game room
+    Route::controller('/game', QuickGame::controller('Game\GameController'));
+});
+
 
 Route::controller('/', QuickGame::controller('HomeController'));// Confide routes

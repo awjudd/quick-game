@@ -118,6 +118,8 @@ return array(
         'Zizaco\Entrust\EntrustServiceProvider',
 
         'TagPlanet\UniversalAnalytics\UniversalAnalyticsServiceProvider',
+
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 	),
 
 	/*

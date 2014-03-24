@@ -10,7 +10,8 @@
 		"zizaco/entrust": "1.*",
 		"zizaco/confide": "1.*",
 		"tag-planet/universal-analytics": "1.*",
-		"mccool/laravel-auto-presenter": "*"
+		"mccool/laravel-auto-presenter": "*",
+		"barryvdh/laravel-ide-helper": "1.*"
 	},
 	"autoload": {
 		"classmap": [
@@ -33,6 +34,7 @@
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
+			"php artisan ide-helper:generate --sublime",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
