@@ -26,7 +26,7 @@
                 <div id="collapseTwo" class="panel-collapse collapse">
                     <div class="panel-body">
                         <ul>
-                            <li><span class="glyphicon glyphicon-log-in"></span>{{ HTML::link(QuickGame::action('Game\BlackJackController@getIndex'), 'Black Jack') }}</li>
+                            <li><span class="glyphicon glyphicon-plus"></span>{{ HTML::link(QuickGame::action('Game\BlackJackController@getIndex'), 'Black Jack') }}</li>
                         </ul>
                     </div>
                 </div>
