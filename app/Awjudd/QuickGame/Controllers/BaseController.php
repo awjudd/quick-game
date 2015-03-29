@@ -3,7 +3,7 @@
 * @Author: Andrew Judd
 * @Date:   2014-03-22 21:50:04
 * @Last Modified by:   Andrew Judd
-* @Last Modified time: 2014-03-23 10:45:48
+* @Last Modified time: 2014-03-30 20:36:56
 */
 
 use Auth;
@@ -39,7 +39,7 @@ abstract class BaseController extends Controller
         if(Auth::user())
         {
             // They are, so show the user-specific information
-            $this->render('links', 'layout.user.links', compact('user'));
+            $this->render('links', 'layout.user.links', compact('user`'));
 
         }
         else
